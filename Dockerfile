@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 #    libpython-dev
 RUN groupadd cowrie
 RUN useradd -d /cowrie -m -g cowrie cowrie
+RUN pip install packaging
 USER cowrie
 
 RUN git clone -b develop http://github.com/micheloosterhof/cowrie /cowrie/cowrie-git
